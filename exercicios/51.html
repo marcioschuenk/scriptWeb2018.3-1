@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicios JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+
+        <h2>51) Elaborar um algoritmo em pseudocodigo que leia um número. Se positivo armazene-o em uma variável chamada “A”,se for negativo, em uma variável chamada “B”. No final mostrar o resultado das duas variáveis.</h2>
+
+        <div class="form-group">
+            <label for="">Digite um valor</label>
+            <input type="number" id="valor" class="form-control">
+        </div>
+        <button class="btn btn-primary" onclick="saida(valorAB())">OK</button>
+
+        <span id="saida"></span>
+
+        <script>
+            function valorAB() {
+                let v = document.getElementById("valor").value;
+                let a = 0, b = 0;
+                if (v >= 0) {
+                    a = v;
+                } else {
+                    b = v;
+                }
+                return "<p>Valor de A: " + a + " <br>Valor de B: " + b + "</p>"
+            }
+
+            function saida(texto) {
+                document.getElementById("saida").innerHTML = texto;
+            }
+        </script>
+    </main>
+</body>
+
+</html>
